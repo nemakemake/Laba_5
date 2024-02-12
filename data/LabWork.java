@@ -15,22 +15,37 @@ public class LabWork {
 
     public LabWork(){}
 
-    public LabWork(Integer id, String name, Coordinates coordinates, LocalDate creationDate, float minimalPoint, float maximumPoint, Difficulty difficulty,Discipline discipline){
+    public LabWork(Integer id, String name, Coordinates coordinates, LocalDate creationDate, float minimalPoint, Float maximumPoint, Integer difficulty,Discipline discipline){
         this.id = id;
         this.name= name;
         this.coordinates = coordinates;
         this.creationDate = creationDate;
         this.minimalPoint = minimalPoint;
         this.maximumPoint = maximumPoint;
-        this.difficulty = difficulty;
+        if (difficulty == null){ this.difficulty = null;}
+        else {this.difficulty = Difficulty.values()[difficulty-1];}
         this.discipline = discipline;
     }
 
     public LabWork createSample(){
-        return new LabWork(1,"sample", new Coordinates(1,1d), LocalDate.now(), 1f, 5f, Difficulty.NORMAL, new Discipline("SampleDis", 1));
+        return new LabWork(1,"sample", new Coordinates(1,1d), LocalDate.now(), 1f, 5f, 2, new Discipline("SampleDis", 1));
     }
 
     public Integer getId() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return "LabWork{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", coordinates=" + coordinates +
+                ", creationDate=" + creationDate +
+                ", minimalPoint=" + minimalPoint +
+                ", maximumPoint=" + maximumPoint +
+                ", difficulty=" + difficulty +
+                ", discipline=" + discipline +
+                '}';
     }
 }

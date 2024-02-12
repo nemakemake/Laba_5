@@ -6,12 +6,13 @@
 		"x": 1,
 		"y": 0
 	},
+	"creationDate": "2024-03-12",
 	"minimalPoint": 10.1,
 	"maximumPoint": 10.4,
-	"difficulty": "HARD",
+	"difficulty": 1,
 	"discipline": {
-		"name": "Physics",
+		"nameOfDiscipline": "Physics",
 		"practiceHours": 10
+		}
 	}
-}
 }

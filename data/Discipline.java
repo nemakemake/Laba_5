@@ -24,4 +24,12 @@ public class Discipline {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Discipline{" +
+                "name='" + name + '\'' +
+                ", practiceHours=" + practiceHours +
+                '}';
+    }
 }
