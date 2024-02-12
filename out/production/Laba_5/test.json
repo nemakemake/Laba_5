@@ -1,0 +1,18 @@
+{
+	"physics lab 1": {
+	"id": 1,
+	"name": "physics lab 1",
+	"coordinates": {
+		"x": 1,
+		"y": 0
+	},
+	"creationDate": "2024-03-12",
+	"minimalPoint": 10.1,
+	"maximumPoint": 10.4,
+	"difficulty": 1,
+	"discipline": {
+		"nameOfDiscipline": "Physics",
+		"practiceHours": 10
+		}
+	}
+}
