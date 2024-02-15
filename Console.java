@@ -1,16 +1,18 @@
-import commands.CommandOperator;
+import commands.CommandManager;
 
 import java.util.Scanner;
 
 public class Console {
     Scanner scanner = new Scanner(System.in);
-    CommandOperator commandOperator = new CommandOperator();
+    CommandManager commandManager = new CommandManager();
     public Console(){
     }
 
     public void start(){
         System.out.println("Program started. Input 'help' for list of commands");
-        operateWithInput();
+        while(true){
+            operateWithInput();
+        }
     }
     public void operateWithInput(){
         System.out.print("-> ");
@@ -20,6 +22,6 @@ public class Console {
         String[] fields = input.split(" ");
         if (fields.length >= 1) name = fields[0];
         if (fields.length >= 2) arg = fields[1];
-        commandOperator.jobFinder(name, arg);
+        commandManager.jobFinder(name, arg);
     }
 }

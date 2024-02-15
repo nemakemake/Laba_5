@@ -1,20 +1,23 @@
 package utilities;
 
+import collection.Collection;
 import data.Coordinates;
 import data.Discipline;
 import data.LabWork;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.*;
 import java.io.File;
 
 public class FileOperator {
     File testFile = new File("test2.json");
-    public void readFile() throws FileNotFoundException {
+    public Collection readFile() throws FileNotFoundException {
         Scanner scanner = new Scanner(testFile);
-        System.out.println(parseToLab(scanner).toString());
+        return new Collection(testFile.getName(), parseToLab(scanner), Instant.ofEpochMilli(testFile.lastModified()).atZone(ZoneId.systemDefault()).toLocalDate());
     }
 
     public Hashtable<Integer, LabWork> parseToLab(Scanner scanner){
@@ -54,14 +57,8 @@ public class FileOperator {
                 Double.parseDouble(bricks.get("y"))
         );
         LocalDate localDate =LocalDate.parse(bricks.get("creationDate"));
-        float minimalPoint = Float.parseFloat(bricks.get("minimalPoint"));
-        Float maximumPoint;
+        Long minimalPoint = Long.parseLong(bricks.get("minimalPoint"));
         Integer difficulty;
-        if (Objects.equals(bricks.get("maximumPoint"), "null")) {
-            maximumPoint = null;
-        } else {
-            maximumPoint = Float.parseFloat(bricks.get("maximumPoint"));
-        }
         if (Objects.equals(bricks.get("difficulty"), "null")) {
             difficulty = null;
         } else {
@@ -71,6 +68,6 @@ public class FileOperator {
                 bricks.get("nameOfDiscipline"),
                 Integer.parseInt(bricks.get("practiceHours"))
         );
-        return new LabWork(id, name, coordinates, localDate, minimalPoint, maximumPoint, difficulty, discipline);
+        return new LabWork(id, name, coordinates, localDate, minimalPoint, difficulty, discipline);
     }
 }

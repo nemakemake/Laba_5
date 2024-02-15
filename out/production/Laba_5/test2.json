@@ -7,8 +7,7 @@
       "y": 200
     },
     "creationDate": "2022-03-15",
-    "minimalPoint": 5.8,
-    "maximumPoint": 9.7,
+    "minimalPoint": 5,
     "difficulty": 1,
     "discipline": {
       "name": "Math",
@@ -23,8 +22,7 @@
       "y": 250
     },
     "creationDate": "2022-03-16",
-    "minimalPoint": 6.3,
-    "maximumPoint": 9.5,
+    "minimalPoint": 6,
     "difficulty": 2,
     "discipline": {
       "name": "Physics",
@@ -39,8 +37,7 @@
       "y": 300
     },
     "creationDate": "2022-03-17",
-    "minimalPoint": 7.2,
-    "maximumPoint": 5,
+    "minimalPoint": 7,
     "difficulty": 3,
     "discipline": {
       "name": "Chemistry",
@@ -55,8 +52,7 @@
       "y": 350
     },
     "creationDate": "2022-03-18",
-    "minimalPoint": 6.8,
-    "maximumPoint": 9.0,
+    "minimalPoint": 6,
     "difficulty": 4,
     "discipline": {
       "name": "Biology",
@@ -71,8 +67,7 @@
       "y": 400
     },
     "creationDate": "2022-03-19",
-    "minimalPoint": 8.0,
-    "maximumPoint": null,
+    "minimalPoint": 8,
     "difficulty": 1,
     "discipline": {
       "name": "Biology",
@@ -87,8 +82,7 @@
       "y": 450
     },
     "creationDate": "2022-03-20",
-    "minimalPoint": 7.5,
-    "maximumPoint": 8.9,
+    "minimalPoint": 7,
     "difficulty": 1,
     "discipline": {
       "name": "Biology",
@@ -103,8 +97,7 @@
         "y": 500
     },
     "creationDate": "2022-03-21",
-    "minimalPoint": 6.5,
-    "maximumPoint": null,
+    "minimalPoint": 6,
     "difficulty": 3,
     "discipline": {
       "name": "Computer Science",
@@ -119,8 +112,7 @@
       "y": 550
     },
     "creationDate": "2022-03-22",
-    "minimalPoint": 7.0,
-    "maximumPoint": 9,
+    "minimalPoint": 7,
     "difficulty": 2,
     "discipline": {
       "name": "Engineering",
@@ -135,8 +127,7 @@
       "y": 600
     },
     "creationDate": "2022-03-23",
-    "minimalPoint": 6.2,
-    "maximumPoint": 8.3,
+    "minimalPoint": 6,
     "difficulty": 1,
     "discipline": {
       "name": "Geology",
@@ -151,8 +142,7 @@
       "y": 650
     },
     "creationDate": "2022-03-24",
-    "minimalPoint": 7.8,
-    "maximumPoint": 9.2,
+    "minimalPoint": 7,
     "difficulty": 2,
     "discipline": {
       "name": "Astronomy",

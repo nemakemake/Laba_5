@@ -7,7 +7,7 @@ public class HelpCommand extends Command {
         super("help");
     }
     @Override
-    public void doSomething(String arg){
+    public void execute(String arg){
         System.out.println("list of commands...");
     }
 }

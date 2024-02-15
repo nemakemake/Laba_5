@@ -5,10 +5,8 @@ import java.io.FileNotFoundException;
 import java.util.Hashtable;
 
 public class Main {
+    static Console console = new Console();
     public static void main(String[] args) throws FileNotFoundException {
-        FileOperator op = new FileOperator();
-        op.readFile();
-//        Console console = new Console();
-//        console.start();
+        console.start();
     }
 }
