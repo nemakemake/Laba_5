@@ -5,14 +5,12 @@ import src.utilities.ConsoleInput;
 import src.utilities.ConsoleOutput;
 
 public class Console implements Client {
-    CommandManager commandManager;
-    ConsoleInput input;
-    ConsoleOutput output;
+    protected CommandManager commandManager;
+    protected ConsoleInput input = new ConsoleInput();
+    protected ConsoleOutput output = new ConsoleOutput();
     public Console(){
-        this.input = new ConsoleInput();
-        this.output = new ConsoleOutput();
-        this.commandManager = new CommandManager(output, input);
     }
+
 
     @Override
     public void start(){
@@ -32,5 +30,17 @@ public class Console implements Client {
         if (fields.length >= 1) name = fields[0];
         if (fields.length >= 2) arg = fields[1];
         commandManager.jobFinder(name, arg);
+    }
+
+    public ConsoleInput getInput() {
+        return input;
+    }
+
+    public ConsoleOutput getOutput() {
+        return output;
+    }
+
+    public void setCommandManager(CommandManager commandManager) {
+        this.commandManager = commandManager;
     }
 }

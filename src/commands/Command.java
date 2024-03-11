@@ -1,29 +1,28 @@
 package src.commands;
 
 import src.structure.CollectionManager;
+import src.structure.Console;
+import src.structure.LogicTransfer;
 import src.utilities.ConsoleInput;
 import src.utilities.ConsoleOutput;
 
 public abstract class Command {
     protected String description;
     protected CollectionManager collectionManager;
-    protected ConsoleInput input;
-    protected ConsoleOutput output;
+    protected LogicTransfer logicTransfer;
     public Command(String description){
         this.description = description;
     }
 
-    public Command(String description, ConsoleOutput output){
+    public Command(String description, LogicTransfer logicTransfer){
         this.description = description;
-        this.output = output;
+        this.logicTransfer = logicTransfer;
     }
 
-    public Command(String description, ConsoleOutput output, ConsoleInput input){
-        this.description = description;
-        this.output = output;
-        this.input = input;
-    }
 
+    public void setLogicTransfer(LogicTransfer logicTransfer){
+        this.logicTransfer = logicTransfer;
+    }
     public void setCollectionManager(CollectionManager collectionManager) {
         this.collectionManager = collectionManager;
     }

@@ -22,7 +22,7 @@ public class Collection {
     }
 
     public Collection(String name, Hashtable<Integer, LabWork> labWorks, LocalDate date){
-        this.LabWorks = new Hashtable<Integer, LabWork>();
+        this.LabWorks = labWorks;
         this.CreationDate = date;
         this.name = name;
     }

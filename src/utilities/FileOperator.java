@@ -48,7 +48,6 @@ public class FileOperator {
     }
 
     public LabWork convertToLab(HashMap<String, String> bricks){
-        System.out.println(bricks);
         int id = Integer.parseInt(bricks.get("id"));
         String name = bricks.get("name");
         Coordinates coordinates = new Coordinates(

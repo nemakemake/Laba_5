@@ -1,24 +1,34 @@
 package src.structure;
 
-import src.commands.AddCommand;
-import src.commands.Command;
-import src.commands.HelpCommand;
-import src.commands.InfoCommand;
+import src.commands.*;
 import src.utilities.ConsoleInput;
 import src.utilities.ConsoleOutput;
 
 import java.util.HashMap;
+import java.util.logging.LoggingPermission;
 
 public class CommandManager {
     HashMap<String, Command> listOfCommands = new HashMap<String, Command>();
     CollectionManager collectionManager;
+    LogicTransfer logicTransfer;
 
-    public CommandManager(ConsoleOutput output, ConsoleInput input){
-        collectionManager = new CollectionManager();
-        addCommand("help", new HelpCommand(output));
-        addCommand("add", new AddCommand());
-        addCommand("info",new InfoCommand(output));
+    public CommandManager(LogicTransfer logicTransfer){
+        addCommand("help", new HelpCommand(logicTransfer));
+        addCommand("add", new AddCommand(logicTransfer));
+        addCommand("info",new InfoCommand(logicTransfer));
+        addCommand("show",new ShowCommand(logicTransfer));
+        addCommand("update", new UpdateCommand(logicTransfer));
     }
+
+    public void setBlocks(CollectionManager collectionManager, LogicTransfer logicTransfer){
+        this.collectionManager = collectionManager;
+        this.logicTransfer = logicTransfer;
+        for (String key: listOfCommands.keySet()){
+            listOfCommands.get(key).setLogicTransfer(logicTransfer);
+            listOfCommands.get(key).setCollectionManager(collectionManager);
+        }
+    }
+
     private void addCommand(String name, Command command){
         command.setCollectionManager(collectionManager);
         listOfCommands.put(name, command);

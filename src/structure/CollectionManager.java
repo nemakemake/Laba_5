@@ -11,7 +11,6 @@ import java.util.HashSet;
 public class CollectionManager implements CollectionManagement {
     Collection collection;
     FileOperator fileOperator = new FileOperator();
-    LabWork lab = new LabWork();
     HashSet<Integer> idregistry = new HashSet<Integer>();
     public CollectionManager() {
          this.collection = new Collection("Collection of Labs");
@@ -19,6 +18,9 @@ public class CollectionManager implements CollectionManagement {
     @Override
     public void readFile() throws FileNotFoundException {
         collection = fileOperator.readFile();
+        for (int key: collection.getLabWorks().keySet()){
+            idregistry.add(collection.getLabWorks().get(key).getId());
+        }
     }
 
     @Override

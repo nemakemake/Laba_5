@@ -2,23 +2,20 @@ package src.commands;
 
 import src.collection.Collection;
 import src.structure.CollectionManager;
+import src.structure.LogicTransfer;
 import src.utilities.ConsoleOutput;
 
 public class InfoCommand extends Command{
-    public InfoCommand(ConsoleOutput output){
-        super("info", output);
+    public InfoCommand(LogicTransfer logicTransfer){
+        super("info", logicTransfer);
     }
-
-    CollectionManager collectionManager = new CollectionManager();
-    Collection demoCollection;
     @Override
     public void execute(String arg){
-        demoCollection = collectionManager.getCollection();
-        output.println(
-                "type             | HashTable \n"+
-                "name             | " + demoCollection.getName() + "\n"+
-                "date of creation | "+ demoCollection.getCreationDate().toString() + "\n"+
-                "collection size  | "+ demoCollection.getLabWorks().size() + " elements"
+        logicTransfer.sendOutput(
+                "type             | " + collectionManager.getCollection().getLabWorks().getClass().getSimpleName()+ "\n"+
+                "name             | " + collectionManager.getCollection().getName() + "\n"+
+                "date of creation | "+ collectionManager.getCollection().getCreationDate().toString() + "\n"+
+                "collection size  | "+ collectionManager.getCollection().getLabWorks().keySet().size() + " elements\n"
         );
     }
 }
