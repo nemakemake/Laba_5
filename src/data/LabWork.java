@@ -3,7 +3,7 @@ package src.data;
 
 import java.time.LocalDate;
 
-public class LabWork {
+public class LabWork implements Comparable{
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null
@@ -33,17 +33,28 @@ public class LabWork {
         return id;
     }
 
-    @Override
-    public String toString() {
-        return "LabWork{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", coordinates=" + coordinates +
-                ", creationDate=" + creationDate +
-                ", minimalPoint=" + minimalPoint +
-                ", difficulty=" + difficulty +
-                ", discipline=" + discipline +
-                '}';
+    public String getName() {
+        return name;
+    }
+
+    public Coordinates getCoordinates() {
+        return coordinates;
+    }
+
+    public LocalDate getCreationDate() {
+        return creationDate;
+    }
+
+    public Long getMinimalPoint() {
+        return minimalPoint;
+    }
+
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public Discipline getDiscipline() {
+        return discipline;
     }
 
     public void setName(String name) {
@@ -68,5 +79,28 @@ public class LabWork {
 
     public void setDiscipline(Discipline discipline) {
         this.discipline = discipline;
+    }
+
+    @Override
+    public String toString() {
+        return "LabWork{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", coordinates=" + coordinates +
+                ", creationDate=" + creationDate +
+                ", minimalPoint=" + minimalPoint +
+                ", difficulty=" + difficulty +
+                ", discipline=" + discipline +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Object o){
+        LabWork oLab = (LabWork)o;
+        int compareOfDifficulty = this.difficulty.compareTo(oLab.getDifficulty());
+        if (compareOfDifficulty != 0){
+            return compareOfDifficulty;
+        }
+        return this.id.compareTo(oLab.getId());
     }
 }

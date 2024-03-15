@@ -24,5 +24,6 @@ public class AddCommand extends Command{
     @Override
     public void execute(String arg) {
         collectionManager.addToCollection(elementCreate.createNewElement());
+        logicTransfer.sendOutputln("Объект добавлен успешно");
     }
 }
