@@ -21,6 +21,7 @@ public class CommandManager {
         addCommand("remove_by_id", new RemoveByIDCommand(logicTransfer));
         addCommand("clear", new ClearCommand(logicTransfer));
         addCommand("add_if_max", new AddIfMaxCommand(logicTransfer));
+        addCommand("remove_greater", new RemoveGreaterCommand(logicTransfer));
     }
 
     public void setBlocks(CollectionManager collectionManager, LogicTransfer logicTransfer){
