@@ -11,7 +11,7 @@ public class ShowCommand extends Command{
     @Override
     public void execute(String arg) {
         for (int key: collectionManager.getCollection().getLabWorks().keySet()){
-            logicTransfer.sendOutputln(collectionManager.getCollection().getLabWorks().get(key).toString());
+            logicTransfer.sendOutputln(collectionManager.getElement(key).toString());
         }
     }
 }

@@ -5,12 +5,15 @@ import src.utilities.ConsoleInput;
 import src.utilities.ConsoleOutput;
 
 import java.util.HashMap;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.logging.LoggingPermission;
 
 public class CommandManager {
     HashMap<String, Command> listOfCommands = new HashMap<String, Command>();
     CollectionManager collectionManager;
     LogicTransfer logicTransfer;
+    History history = new History();
 
     public CommandManager(LogicTransfer logicTransfer){
         addCommand("help", new HelpCommand(logicTransfer));
@@ -22,6 +25,7 @@ public class CommandManager {
         addCommand("clear", new ClearCommand(logicTransfer));
         addCommand("add_if_max", new AddIfMaxCommand(logicTransfer));
         addCommand("remove_greater", new RemoveGreaterCommand(logicTransfer));
+        addCommand("history", new HistoryCommand(logicTransfer, history));
     }
 
     public void setBlocks(CollectionManager collectionManager, LogicTransfer logicTransfer){
@@ -32,12 +36,13 @@ public class CommandManager {
             listOfCommands.get(key).setCollectionManager(collectionManager);
         }
     }
-
     private void addCommand(String name, Command command){
         command.setCollectionManager(collectionManager);
         listOfCommands.put(name, command);
     }
     public void jobFinder(String name, String arg){
         listOfCommands.get(name).execute(arg);
+        history.addToHistory(listOfCommands.get(name));
     }
+
 }

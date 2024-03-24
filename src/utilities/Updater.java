@@ -16,7 +16,7 @@ public class Updater {
     }
     public void update(int ID){
         logicTransfer.sendOutputln("Выбран элемент "
-                + collectionManager.getCollection().getLabWorks().get(ID).toString() + "\n"
+                + collectionManager.getElement(ID).toString() + "\n"
                 + "Выберите данные для изменения \n" +
                 "1) Имя\n" +
                 "2) Координаты\n" +
@@ -26,19 +26,19 @@ public class Updater {
         int fieldnumber = Integer.parseInt(logicTransfer.requestInput());
         switch (fieldnumber){
             case(1):
-                collectionManager.getCollection().getLabWorks().get(ID).setName(elementCreate.createNewName());
+                collectionManager.getElement(ID).setName(elementCreate.createNewName());
                 break;
             case(2):
-                collectionManager.getCollection().getLabWorks().get(ID).setCoordinates(elementCreate.createNewCoordinates());
+                collectionManager.getElement(ID).setCoordinates(elementCreate.createNewCoordinates());
                 break;
             case(3):
-                collectionManager.getCollection().getLabWorks().get(ID).setMinimalPoint(elementCreate.createNewMinimalPoint());
+                collectionManager.getElement(ID).setMinimalPoint(elementCreate.createNewMinimalPoint());
                 break;
             case(4):
-                collectionManager.getCollection().getLabWorks().get(ID).setDifficulty(Difficulty.values()[elementCreate.createNewDifficulty()-1]);
+                collectionManager.getElement(ID).setDifficulty(Difficulty.values()[elementCreate.createNewDifficulty()-1]);
                 break;
             case(5):
-                collectionManager.getCollection().getLabWorks().get(ID).setDiscipline(elementCreate.createNewDiscipline());
+                collectionManager.getElement(ID).setDiscipline(elementCreate.createNewDiscipline());
                 break;
         }
     }

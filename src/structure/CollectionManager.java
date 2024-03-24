@@ -19,7 +19,7 @@ public class CollectionManager implements CollectionManagement {
     public void readFile() throws FileNotFoundException {
         collection = fileOperator.readFile();
         for (int key: collection.getLabWorks().keySet()){
-            idregistry.add(collection.getLabWorks().get(key).getId());
+            idregistry.add(getElement(key).getId());
         }
     }
 
@@ -38,7 +38,12 @@ public class CollectionManager implements CollectionManagement {
         return collection;
     }
     @Override
-    public void addToCollection(LabWork labWork){
+    public void addToCollection(Object obj){
+        LabWork labWork = (LabWork) obj;
         collection.getLabWorks().put(labWork.getId(),labWork);
+    }
+    @Override
+    public LabWork getElement(int ID){
+        return getCollection().getLabWorks().get(ID);
     }
 }

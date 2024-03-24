@@ -13,7 +13,9 @@ public interface CollectionManagement {
 
     void setIdregistry(HashSet<Integer> idregistry);
 
-    Collection getCollection();
+    <T> T getCollection();
 
-    void addToCollection(LabWork labWork);
+    void addToCollection(Object obj);
+
+    <T> T getElement(int ID);
 }

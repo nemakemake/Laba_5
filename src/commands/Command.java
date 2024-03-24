@@ -32,4 +32,9 @@ public abstract class Command {
     }
 
     public abstract void execute(String arg);
+
+    @Override
+    public String toString() {
+        return description;
+    }
 }
