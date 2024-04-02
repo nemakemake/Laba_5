@@ -81,6 +81,7 @@ public class LabWork implements Comparable{
         this.discipline = discipline;
     }
 
+
     @Override
     public String toString() {
         return "LabWork{" +
@@ -100,6 +101,10 @@ public class LabWork implements Comparable{
         int compareOfDifficulty = this.difficulty.compareTo(oLab.getDifficulty());
         if (compareOfDifficulty != 0){
             return compareOfDifficulty;
+        }
+        int compareOfDiscipline = this.discipline.compareTo(oLab.getDiscipline());
+        if (compareOfDiscipline != 0){
+            return compareOfDiscipline;
         }
         return this.id.compareTo(oLab.getId());
     }

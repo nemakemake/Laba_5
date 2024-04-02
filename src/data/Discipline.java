@@ -1,12 +1,12 @@
 package src.data;
 
-public class Discipline {
+public class Discipline implements Comparable {
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Integer labCount; //Поле не может быть null
 
-    public Discipline(String name, Integer practiceHours){
+    public Discipline(String name, Integer labCount){
         this.name = name;
-        this.labCount = practiceHours;
+        this.labCount = labCount;
     }
 
     public Integer getLabCount() {
@@ -23,6 +23,13 @@ public class Discipline {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+
+    @Override
+    public int compareTo(Object o) {
+        Discipline disc = (Discipline)o;
+        return this.labCount.compareTo(disc.getLabCount());
     }
 
     @Override

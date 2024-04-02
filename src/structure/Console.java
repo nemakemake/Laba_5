@@ -14,7 +14,7 @@ public class Console implements Client {
 
     @Override
     public void start(){
-        output.println("Program started. Input 'help' for list of commands");
+        output.println("Starting... \nInput 'help' for list of commands");
         while(true){
             operateWithInput();
         }

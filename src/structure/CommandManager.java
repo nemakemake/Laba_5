@@ -26,6 +26,8 @@ public class CommandManager {
         addCommand("add_if_max", new AddIfMaxCommand(logicTransfer));
         addCommand("remove_greater", new RemoveGreaterCommand(logicTransfer));
         addCommand("history", new HistoryCommand(logicTransfer, history));
+        addCommand("min_by_discipline", new MinByDisciplineCommand(logicTransfer));
+        addCommand("count_by_difficulty", new CountByDifficultyCommand(logicTransfer));
     }
 
     public void setBlocks(CollectionManager collectionManager, LogicTransfer logicTransfer){
