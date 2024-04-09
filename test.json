@@ -1,18 +1,146 @@
 {
-	"physics lab 1": {
-	"id": 1,
-	"name": "physics lab 1",
-	"coordinates": {
-		"x": 1,
-		"y": 0
-	},
-	"creationDate": "2024-03-12",
-	"minimalPoint": 10.1,
-	"maximumPoint": 10.4,
-	"difficulty": 1,
-	"discipline": {
-		"nameOfDiscipline": "Physics",
-		"practiceHours": 10
+	"LabWorks": {
+		"10": {
+			"id": 10,
+			"name": "Lab 10",
+			"coordinates": {
+				"x": 550,
+				"y": 650.0
+			},
+			"minimalPoint": 7,
+			"difficulty": "TERRIBLE",
+			"discipline": {
+				"nameOfDiscipline": "Astronomy",
+				"labCount": 14
+			}
+		},
+		"9": {
+			"id": 9,
+			"name": "Lab 9",
+			"coordinates": {
+				"x": 500,
+				"y": 600.0
+			},
+			"minimalPoint": 6,
+			"difficulty": "TERRIBLE",
+			"discipline": {
+				"nameOfDiscipline": "Geology",
+				"labCount": 11
+			}
+		},
+		"8": {
+			"id": 8,
+			"name": "Lab 8",
+			"coordinates": {
+				"x": 450,
+				"y": 550.0
+			},
+			"minimalPoint": 7,
+			"difficulty": "TERRIBLE",
+			"discipline": {
+				"nameOfDiscipline": "Engineering",
+				"labCount": 18
+			}
+		},
+		"7": {
+			"id": 7,
+			"name": "Lab 7",
+			"coordinates": {
+				"x": 400,
+				"y": 500.0
+			},
+			"minimalPoint": 6,
+			"difficulty": "TERRIBLE",
+			"discipline": {
+				"nameOfDiscipline": "Computer Science",
+				"labCount": 20
+			}
+		},
+		"6": {
+			"id": 6,
+			"name": "Lab 6",
+			"coordinates": {
+				"x": 350,
+				"y": 450.0
+			},
+			"minimalPoint": 7,
+			"difficulty": "TERRIBLE",
+			"discipline": {
+				"nameOfDiscipline": "Biology",
+				"labCount": 7
+			}
+		},
+		"5": {
+			"id": 5,
+			"name": "Lab 5",
+			"coordinates": {
+				"x": 300,
+				"y": 400.0
+			},
+			"minimalPoint": 8,
+			"difficulty": "TERRIBLE",
+			"discipline": {
+				"nameOfDiscipline": "Biology",
+				"labCount": 8
+			}
+		},
+		"4": {
+			"id": 4,
+			"name": "Lab 4",
+			"coordinates": {
+				"x": 250,
+				"y": 350.0
+			},
+			"minimalPoint": 6,
+			"difficulty": "TERRIBLE",
+			"discipline": {
+				"nameOfDiscipline": "Biology",
+				"labCount": 12
+			}
+		},
+		"3": {
+			"id": 3,
+			"name": "Lab 3",
+			"coordinates": {
+				"x": 200,
+				"y": 300.0
+			},
+			"minimalPoint": 7,
+			"difficulty": "TERRIBLE",
+			"discipline": {
+				"nameOfDiscipline": "Chemistry",
+				"labCount": 10
+			}
+		},
+		"2": {
+			"id": 2,
+			"name": "Lab 2",
+			"coordinates": {
+				"x": 150,
+				"y": 250.0
+			},
+			"minimalPoint": 6,
+			"difficulty": "TERRIBLE",
+			"discipline": {
+				"nameOfDiscipline": "Physics",
+				"labCount": 15
+			}
+		},
+		"1": {
+			"id": 1,
+			"name": "Lab 1",
+			"coordinates": {
+				"x": 100,
+				"y": 200.0
+			},
+			"minimalPoint": 5,
+			"difficulty": "TERRIBLE",
+			"discipline": {
+				"nameOfDiscipline": "Math",
+				"labCount": 12
+			}
 		}
-	}
+	},
+	"CreationDate": "2024-03-25",
+	"name": "test2.json"
 }

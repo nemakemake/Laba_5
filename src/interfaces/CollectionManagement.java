@@ -7,7 +7,6 @@ import java.io.FileNotFoundException;
 import java.util.HashSet;
 
 public interface CollectionManagement {
-    void readFile() throws FileNotFoundException;
 
     HashSet<Integer> getIdregistry();
 

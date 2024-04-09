@@ -17,6 +17,7 @@ public class CommandManager {
 
     public CommandManager(LogicTransfer logicTransfer){
         addCommand("help", new HelpCommand(logicTransfer));
+        addCommand("save", new SaveCommand(logicTransfer));
         addCommand("add", new AddCommand(logicTransfer));
         addCommand("info",new InfoCommand(logicTransfer));
         addCommand("show",new ShowCommand(logicTransfer));

@@ -21,6 +21,8 @@ public class Collection {
         this.name = name;
     }
 
+    public Collection(){}
+
     public Collection(String name, Hashtable<Integer, LabWork> labWorks, LocalDate date){
         this.LabWorks = labWorks;
         this.CreationDate = date;
@@ -33,6 +35,14 @@ public class Collection {
 
     public void setLabWorks(Hashtable<Integer, LabWork> labWorks) {
         LabWorks = labWorks;
+    }
+
+    public void setCreationDate(LocalDate creationDate) {
+        CreationDate = creationDate;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public LocalDate getCreationDate() {

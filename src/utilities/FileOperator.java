@@ -64,7 +64,7 @@ public class FileOperator {
         }
         Discipline discipline = new Discipline(
                 bricks.get("nameOfDiscipline"),
-                Integer.parseInt(bricks.get("practiceHours"))
+                Integer.parseInt(bricks.get("labCount"))
         );
         return new LabWork(id, name, coordinates, localDate, minimalPoint, difficulty, discipline);
     }

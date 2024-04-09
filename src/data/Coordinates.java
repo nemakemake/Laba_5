@@ -9,6 +9,24 @@ public class Coordinates {
         this.y = y;
     }
 
+    public Coordinates(){}
+
+    public long getX() {
+        return x;
+    }
+
+    public void setX(long x) {
+        this.x = x;
+    }
+
+    public Double getY() {
+        return y;
+    }
+
+    public void setY(Double y) {
+        this.y = y;
+    }
+
     @Override
     public String toString() {
         return "Coordinates{" +

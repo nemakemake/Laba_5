@@ -1,5 +1,5 @@
-package src.utilities;
-o
+package src.parsing;
+
 import com.google.gson.*;
 
 import java.lang.reflect.Type;

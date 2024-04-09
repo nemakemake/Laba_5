@@ -1,153 +1,157 @@
 {
-  "lab1": {
-    "id": 1,
-    "name": "Lab 1",
-    "coordinates": {
-      "x": 100,
-      "y": 200
-    },
-    "creationDate": "2022-03-15",
-    "minimalPoint": 5,
-    "difficulty": 1,
-    "discipline": {
-      "name": "Math",
-      "practiceHours": 12
-    }
-  },
-  "lab2": {
-    "id": 2,
-    "name": "Lab 2",
-    "coordinates": {
-      "x": 150,
-      "y": 250
-    },
-    "creationDate": "2022-03-16",
-    "minimalPoint": 6,
-    "difficulty": 2,
-    "discipline": {
-      "name": "Physics",
-      "practiceHours": 15
-    }
-  },
-  "lab3": {
-    "id": 3,
-    "name": "Lab 3",
-    "coordinates": {
-      "x": 200,
-      "y": 300
-    },
-    "creationDate": "2022-03-17",
-    "minimalPoint": 7,
-    "difficulty": 3,
-    "discipline": {
-      "name": "Chemistry",
-      "practiceHours": 10
-    }
-  },
-  "lab4": {
-    "id": 4,
-    "name": "Lab 4",
-    "coordinates": {
-      "x": 250,
-      "y": 350
-    },
-    "creationDate": "2022-03-18",
-    "minimalPoint": 6,
-    "difficulty": 4,
-    "discipline": {
-      "name": "Biology",
-      "practiceHours": 12
-    }
-  },
-  "lab5": {
-    "id": 5,
-    "name": "Lab 5",
-    "coordinates": {
-      "x": 300,
-      "y": 400
-    },
-    "creationDate": "2022-03-19",
-    "minimalPoint": 8,
-    "difficulty": 1,
-    "discipline": {
-      "name": "Biology",
-      "practiceHours": 8
-    }
-  },
-  "lab6": {
-    "id": 6,
-    "name": "Lab 6",
-    "coordinates": {
-      "x": 350,
-      "y": 450
-    },
-    "creationDate": "2022-03-20",
-    "minimalPoint": 7,
-    "difficulty": 1,
-    "discipline": {
-      "name": "Biology",
-      "practiceHours": 7
-    }
-  },
-  "lab7": {
-    "id": 7,
-    "name": "Lab 7",
+  "LabWorks": {
+    "1": {
+      "id": 1,
+      "name": "Lab 1",
       "coordinates": {
-        "x": 400,
-        "y": 500
+        "x": 100,
+        "y": 200
+      },
+      "creationDate": "2022-03-15",
+      "minimalPoint": 5,
+      "difficulty": 1,
+      "discipline": {
+        "nameOfDiscipline": "Math",
+        "labCount": 12
+      }
     },
-    "creationDate": "2022-03-21",
-    "minimalPoint": 6,
-    "difficulty": 3,
-    "discipline": {
-      "name": "Computer Science",
-      "practiceHours": 20
+    "2": {
+      "id": 2,
+      "name": "Lab 2",
+      "coordinates": {
+        "x": 150,
+        "y": 250
+      },
+      "creationDate": "2022-03-16",
+      "minimalPoint": 6,
+      "difficulty": 2,
+      "discipline": {
+        "nameOfDiscipline": "Physics",
+        "labCount": 15
+      }
+    },
+    "3": {
+      "id": 3,
+      "name": "Lab 3",
+      "coordinates": {
+        "x": 200,
+        "y": 300
+      },
+      "creationDate": "2022-03-17",
+      "minimalPoint": 7,
+      "difficulty": 3,
+      "discipline": {
+        "nameOfDiscipline": "Chemistry",
+        "labCount": 10
+      }
+    },
+    "4": {
+      "id": 4,
+      "name": "Lab 4",
+      "coordinates": {
+        "x": 250,
+        "y": 350
+      },
+      "creationDate": "2022-03-18",
+      "minimalPoint": 6,
+      "difficulty": 4,
+      "discipline": {
+        "nameOfDiscipline": "Biology",
+        "labCount": 12
+      }
+    },
+    "5": {
+      "id": 5,
+      "name": "Lab 5",
+      "coordinates": {
+        "x": 300,
+        "y": 400
+      },
+      "creationDate": "2022-03-19",
+      "minimalPoint": 8,
+      "difficulty": 1,
+      "discipline": {
+        "nameOfDiscipline": "Biology",
+        "labCount": 8
+      }
+    },
+    "6": {
+      "id": 6,
+      "name": "Lab 6",
+      "coordinates": {
+        "x": 350,
+        "y": 450
+      },
+      "creationDate": "2022-03-20",
+      "minimalPoint": 7,
+      "difficulty": 1,
+      "discipline": {
+        "nameOfDiscipline": "Biology",
+        "labCount": 7
+      }
+    },
+    "7": {
+      "id": 7,
+      "name": "Lab 7",
+        "coordinates": {
+          "x": 400,
+          "y": 500
+      },
+      "creationDate": "2022-03-21",
+      "minimalPoint": 6,
+      "difficulty": 3,
+      "discipline": {
+        "nameOfDiscipline": "Computer Science",
+        "labCount": 20
+      }
+    },
+    "8": {
+      "id": 8,
+      "name": "Lab 8",
+      "coordinates": {
+        "x": 450,
+        "y": 550
+      },
+      "creationDate": "2022-03-22",
+      "minimalPoint": 7,
+      "difficulty": 2,
+      "discipline": {
+        "nameOfDiscipline": "Engineering",
+        "labCount": 18
+      }
+    },
+    "9": {
+      "id": 9,
+      "name": "Lab 9",
+      "coordinates": {
+        "x": 500,
+        "y": 600
+      },
+      "creationDate": "2022-03-23",
+      "minimalPoint": 6,
+      "difficulty": 1,
+      "discipline": {
+        "nameOfDiscipline": "Geology",
+        "labCount": 11
+      }
+    },
+    "10": {
+      "id": 10,
+      "name": "Lab 10",
+      "coordinates": {
+        "x": 550,
+        "y": 650
+      },
+      "creationDate": "2022-03-24",
+      "minimalPoint": 7,
+      "difficulty": 2,
+      "discipline": {
+        "nameOfDiscipline": "Astronomy",
+        "labCount": 14
+      }
     }
   },
-  "lab8": {
-    "id": 8,
-    "name": "Lab 8",
-    "coordinates": {
-      "x": 450,
-      "y": 550
-    },
-    "creationDate": "2022-03-22",
-    "minimalPoint": 7,
-    "difficulty": 2,
-    "discipline": {
-      "name": "Engineering",
-      "practiceHours": 18
-    }
-  },
-  "lab9": {
-    "id": 9,
-    "name": "Lab 9",
-    "coordinates": {
-      "x": 500,
-      "y": 600
-    },
-    "creationDate": "2022-03-23",
-    "minimalPoint": 6,
-    "difficulty": 1,
-    "discipline": {
-      "name": "Geology",
-      "practiceHours": 11
-    }
-  },
-  "lab10": {
-    "id": 10,
-    "name": "Lab 10",
-    "coordinates": {
-      "x": 550,
-      "y": 650
-    },
-    "creationDate": "2022-03-24",
-    "minimalPoint": 7,
-    "difficulty": 2,
-    "discipline": {
-      "name": "Astronomy",
-      "practiceHours": 14
-    }
-  }
+  "creationDate": "2024-03-25",
+  "name": "test2.json"
 }
 

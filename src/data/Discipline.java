@@ -1,13 +1,15 @@
 package src.data;
 
 public class Discipline implements Comparable {
-    private String name; //Поле не может быть null, Строка не может быть пустой
+    private String nameOfDiscipline; //Поле не может быть null, Строка не может быть пустой
     private Integer labCount; //Поле не может быть null
 
     public Discipline(String name, Integer labCount){
-        this.name = name;
+        this.nameOfDiscipline = name;
         this.labCount = labCount;
     }
+
+    public Discipline(){}
 
     public Integer getLabCount() {
         return labCount;
@@ -17,12 +19,12 @@ public class Discipline implements Comparable {
         this.labCount = labCount;
     }
 
-    public String getName() {
-        return name;
+    public String getNameOfDiscipline() {
+        return nameOfDiscipline;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameOfDiscipline(String nameOfDiscipline) {
+        this.nameOfDiscipline = nameOfDiscipline;
     }
 
 
@@ -35,7 +37,7 @@ public class Discipline implements Comparable {
     @Override
     public String toString() {
         return "Discipline{" +
-                "name='" + name + '\'' +
+                "name='" + nameOfDiscipline + '\'' +
                 ", practiceHours=" + labCount +
                 '}';
     }

@@ -1,7 +1,8 @@
 package src.interfaces;
 
-public interface Parser {
-    <T> T  toData(String data);
+import src.collection.Collection;
 
-    String toString(Object obj);
+public interface Parser {
+    Collection parse();
+
 }
