@@ -1,17 +1,16 @@
 package src.structure.console;
 
-import src.structure.console.Console;
+
 import src.structure.logic.CommandManager;
 
 public class LogicTransfer {
     private Console console;
-    private CommandManager commandManager;
+
     public LogicTransfer(){
     }
 
     public void setBlocks(Console console, CommandManager commandManager) {
         this.console = console;
-        this.commandManager = commandManager;
     }
 
 

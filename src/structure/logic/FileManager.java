@@ -27,9 +27,14 @@ public class FileManager {
     }
 
     public void readFile(String filePath){
-        JsonParser parser = new JsonParser(filePath);
-        collectionManager.setCollection(parser.parse());
-        collectionManager.setIdregistry(new HashSet<>(collectionManager.getKeySet()));
+        try {
+            JsonParser parser = new JsonParser(filePath);
+            collectionManager.setCollection(parser.parse());
+            collectionManager.setIdregistry(new HashSet<>(collectionManager.getKeySet()));
+        } catch (RuntimeException e){
+            logicTransfer.sendOutputln("Invalid filepath");
+            System.exit(0);
+        }
     }
 
 

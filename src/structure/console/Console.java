@@ -25,7 +25,7 @@ public class Console implements Client {
         String line = input.read();
         String name = "";
         String arg = "";
-        String[] fields = line.split(" ");
+        String[] fields = line.split(" ", 2);
         if (fields.length >= 1) name = fields[0];
         if (fields.length >= 2) arg = fields[1];
         commandManager.jobFinder(name, arg);
@@ -34,7 +34,7 @@ public class Console implements Client {
     public void operateWithScript(String line){
         String name = "";
         String arg = "";
-        String[] fields = line.split(" ");
+        String[] fields = line.split(" ",2 );
         if (fields.length >= 1) name = fields[0];
         if (fields.length >= 2) arg = fields[1];
         commandManager.jobFinder(name, arg);

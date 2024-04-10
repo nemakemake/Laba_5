@@ -12,7 +12,6 @@ import com.google.gson.*;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.Hashtable;
-import java.util.Scanner;
 
 
 public class JsonParser implements Parser {
