@@ -1,7 +1,7 @@
 package src.commands;
 
-import src.structure.History;
-import src.structure.LogicTransfer;
+import src.structure.utils.History;
+import src.structure.console.LogicTransfer;
 
 public class HistoryCommand extends Command{
     History history;

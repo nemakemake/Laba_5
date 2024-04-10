@@ -1,7 +1,6 @@
 package src.commands;
 
-import src.data.LabWork;
-import src.structure.LogicTransfer;
+import src.structure.console.LogicTransfer;
 
 public class ShowCommand extends Command{
     public ShowCommand(LogicTransfer logicTransfer){

@@ -1,6 +1,6 @@
 package src.commands;
 
-import src.structure.LogicTransfer;
+import src.structure.console.LogicTransfer;
 
 public class CountByDifficultyCommand extends Command{
     public CountByDifficultyCommand(LogicTransfer logicTransfer) {

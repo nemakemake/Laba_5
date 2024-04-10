@@ -1,9 +1,6 @@
 package src.commands;
 
-import src.collection.Collection;
-import src.structure.CollectionManager;
-import src.structure.LogicTransfer;
-import src.utilities.ConsoleOutput;
+import src.structure.console.LogicTransfer;
 
 public class InfoCommand extends Command{
     public InfoCommand(LogicTransfer logicTransfer){

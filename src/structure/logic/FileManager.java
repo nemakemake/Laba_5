@@ -1,14 +1,10 @@
-package src.utilities;
+package src.structure.logic;
 
-import src.collection.Collection;
-import src.data.LabWork;
+import src.structure.console.LogicTransfer;
 import src.parsing.JsonParser;
 import src.parsing.JsonWriter;
-import src.structure.CollectionManager;
-import src.structure.LogicTransfer;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.HashSet;
 
 

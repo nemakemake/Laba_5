@@ -1,8 +1,6 @@
 package src.commands;
 
-import src.structure.LogicTransfer;
-import src.utilities.ConsoleInput;
-import src.utilities.ConsoleOutput;
+import src.structure.console.LogicTransfer;
 
 public class HelpCommand extends Command {
     public HelpCommand(LogicTransfer logicTransfer){

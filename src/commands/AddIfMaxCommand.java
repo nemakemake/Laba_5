@@ -2,8 +2,8 @@ package src.commands;
 
 import src.collection.ElementCreate;
 import src.data.LabWork;
-import src.structure.CollectionManager;
-import src.structure.LogicTransfer;
+import src.structure.logic.CollectionManager;
+import src.structure.console.LogicTransfer;
 
 import java.util.Hashtable;
 
@@ -31,6 +31,7 @@ public class AddIfMaxCommand extends Command{
         }
         if (flag == 0) {
             collectionManager.addToCollection(lab);
-        }
+            logicTransfer.sendOutputln("Added successfully");
+        } else {logicTransfer.sendOutputln("Not max!");}
     }
 }

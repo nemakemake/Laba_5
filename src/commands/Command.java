@@ -1,10 +1,7 @@
 package src.commands;
 
-import src.structure.CollectionManager;
-import src.structure.Console;
-import src.structure.LogicTransfer;
-import src.utilities.ConsoleInput;
-import src.utilities.ConsoleOutput;
+import src.structure.logic.CollectionManager;
+import src.structure.console.LogicTransfer;
 
 public abstract class Command {
     protected String description;

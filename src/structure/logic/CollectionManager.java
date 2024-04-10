@@ -1,14 +1,10 @@
-package src.structure;
+package src.structure.logic;
 
 import src.collection.Collection;
 import src.data.LabWork;
 import src.interfaces.CollectionManagement;
-import src.utilities.FileManager;
-import src.utilities.FileOperator;
 
-import java.io.FileNotFoundException;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class CollectionManager implements CollectionManagement {

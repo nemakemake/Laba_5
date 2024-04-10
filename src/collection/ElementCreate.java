@@ -3,12 +3,11 @@ package src.collection;
 import src.data.Coordinates;
 import src.data.Discipline;
 import src.data.LabWork;
-import src.structure.CollectionManager;
-import src.structure.LogicTransfer;
+import src.structure.logic.CollectionManager;
+import src.structure.console.LogicTransfer;
 
 import java.time.LocalDate;
 import java.util.Collections;
-import java.util.Scanner;
 
 public class ElementCreate {
     private LogicTransfer logicTransfer;

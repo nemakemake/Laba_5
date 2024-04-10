@@ -1,8 +1,8 @@
 package src.commands;
 
-import src.structure.CollectionManager;
-import src.structure.LogicTransfer;
-import src.utilities.Updater;
+import src.structure.logic.CollectionManager;
+import src.structure.console.LogicTransfer;
+import src.structure.utils.Updater;
 
 public class UpdateCommand extends Command{
     private Updater updater;

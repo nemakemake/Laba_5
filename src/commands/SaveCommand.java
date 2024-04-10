@@ -1,7 +1,7 @@
 package src.commands;
 
-import src.structure.LogicTransfer;
-import src.utilities.FileManager;
+import src.structure.console.LogicTransfer;
+import src.structure.logic.FileManager;
 
 public class SaveCommand extends Command{
     public SaveCommand(LogicTransfer logicTransfer){

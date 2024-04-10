@@ -1,10 +1,10 @@
 package src;
 
-import src.structure.CollectionManager;
-import src.structure.CommandManager;
-import src.structure.Console;
-import src.structure.LogicTransfer;
-import src.utilities.FileManager;
+import src.structure.logic.CollectionManager;
+import src.structure.logic.CommandManager;
+import src.structure.console.Console;
+import src.structure.console.LogicTransfer;
+import src.structure.logic.FileManager;
 
 import java.io.IOException;
 
@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         LogicTransfer logicTransfer = new LogicTransfer();
         Console console = new Console();
-        CommandManager commandManager = new CommandManager(logicTransfer);
+        CommandManager commandManager = new CommandManager(logicTransfer, console);
         CollectionManager collectionManager = new CollectionManager();
         FileManager fileManager = new FileManager(logicTransfer, collectionManager);
 

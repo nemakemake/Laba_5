@@ -1,13 +1,11 @@
-package src.structure;
+package src.structure.logic;
 
 import src.commands.*;
-import src.utilities.ConsoleInput;
-import src.utilities.ConsoleOutput;
+import src.structure.console.Console;
+import src.structure.utils.History;
+import src.structure.console.LogicTransfer;
 
 import java.util.HashMap;
-import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.logging.LoggingPermission;
 
 public class CommandManager {
     HashMap<String, Command> listOfCommands = new HashMap<String, Command>();
@@ -15,9 +13,11 @@ public class CommandManager {
     LogicTransfer logicTransfer;
     History history = new History();
 
-    public CommandManager(LogicTransfer logicTransfer){
+    public CommandManager(LogicTransfer logicTransfer, Console console){
         addCommand("help", new HelpCommand(logicTransfer));
         addCommand("save", new SaveCommand(logicTransfer));
+        addCommand("exit", new ExitCommand(logicTransfer));
+        addCommand("execute_script", new ExecuteScriptCommand(logicTransfer, this, console));
         addCommand("add", new AddCommand(logicTransfer));
         addCommand("info",new InfoCommand(logicTransfer));
         addCommand("show",new ShowCommand(logicTransfer));
@@ -44,7 +44,12 @@ public class CommandManager {
         listOfCommands.put(name, command);
     }
     public void jobFinder(String name, String arg){
-        listOfCommands.get(name).execute(arg);
+        try {
+            listOfCommands.get(name).execute(arg);
+        } catch (NullPointerException e){
+            logicTransfer.sendOutputln("Invalid command");
+            return;
+        }
         history.addToHistory(listOfCommands.get(name));
     }
 

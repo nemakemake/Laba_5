@@ -1,9 +1,9 @@
-package src.utilities;
+package src.structure.utils;
 
 import src.collection.ElementCreate;
 import src.data.Difficulty;
-import src.structure.CollectionManager;
-import src.structure.LogicTransfer;
+import src.structure.console.LogicTransfer;
+import src.structure.logic.CollectionManager;
 
 public class Updater {
     LogicTransfer logicTransfer;

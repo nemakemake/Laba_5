@@ -1,4 +1,4 @@
-package src.structure;
+package src.structure.utils;
 
 import src.commands.Command;
 

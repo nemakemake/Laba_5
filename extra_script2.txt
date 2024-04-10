@@ -1,0 +1,2 @@
+execute_script extra_script.txt
+info

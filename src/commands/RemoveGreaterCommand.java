@@ -2,10 +2,9 @@ package src.commands;
 
 import src.collection.ElementCreate;
 import src.data.LabWork;
-import src.structure.CollectionManager;
-import src.structure.LogicTransfer;
+import src.structure.logic.CollectionManager;
+import src.structure.console.LogicTransfer;
 
-import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class RemoveGreaterCommand extends Command {

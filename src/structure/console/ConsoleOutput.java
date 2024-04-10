@@ -1,4 +1,4 @@
-package src.utilities;
+package src.structure.console;
 
 import src.interfaces.Output;
 

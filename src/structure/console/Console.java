@@ -1,8 +1,7 @@
-package src.structure;
+package src.structure.console;
 
 import src.interfaces.Client;
-import src.utilities.ConsoleInput;
-import src.utilities.ConsoleOutput;
+import src.structure.logic.CommandManager;
 
 public class Console implements Client {
     protected CommandManager commandManager;
@@ -24,6 +23,15 @@ public class Console implements Client {
     public void operateWithInput(){
         output.print(">> ");
         String line = input.read();
+        String name = "";
+        String arg = "";
+        String[] fields = line.split(" ");
+        if (fields.length >= 1) name = fields[0];
+        if (fields.length >= 2) arg = fields[1];
+        commandManager.jobFinder(name, arg);
+    }
+
+    public void operateWithScript(String line){
         String name = "";
         String arg = "";
         String[] fields = line.split(" ");

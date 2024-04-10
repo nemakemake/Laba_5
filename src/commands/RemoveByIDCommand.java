@@ -1,6 +1,6 @@
 package src.commands;
 
-import src.structure.LogicTransfer;
+import src.structure.console.LogicTransfer;
 
 public class RemoveByIDCommand extends Command{
     public RemoveByIDCommand(LogicTransfer logicTransfer){super("remove_by_id", logicTransfer);}

@@ -1,8 +1,8 @@
 package src.commands;
 
 import src.collection.ElementCreate;
-import src.structure.CollectionManager;
-import src.structure.LogicTransfer;
+import src.structure.logic.CollectionManager;
+import src.structure.console.LogicTransfer;
 
 public class AddCommand extends Command{
     ElementCreate elementCreate = new ElementCreate(logicTransfer, collectionManager);
@@ -24,6 +24,6 @@ public class AddCommand extends Command{
     @Override
     public void execute(String arg) {
         collectionManager.addToCollection(elementCreate.createNewElement());
-        logicTransfer.sendOutputln("Объект добавлен успешно");
+        logicTransfer.sendOutputln("Adding complete");
     }
 }

@@ -7,7 +7,7 @@ import src.data.Difficulty;
 import src.data.Discipline;
 import src.data.LabWork;
 import src.interfaces.Writer;
-import src.structure.CollectionManager;
+import src.structure.logic.CollectionManager;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -45,6 +45,5 @@ public class JsonWriter implements Writer {
         catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println(jsonText);
     }
  }
