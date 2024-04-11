@@ -5,7 +5,7 @@ import src.structure.console.LogicTransfer;
 import src.structure.utils.Updater;
 
 public class UpdateCommand extends Command{
-    private Updater updater;
+    private final Updater updater;
     public UpdateCommand(LogicTransfer logicTransfer){
         super("update", logicTransfer);
         this.updater = new Updater(collectionManager, logicTransfer);

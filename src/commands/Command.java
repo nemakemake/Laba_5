@@ -7,14 +7,15 @@ public abstract class Command {
     protected String description;
     protected CollectionManager collectionManager;
     protected LogicTransfer logicTransfer;
-    public Command(String description){
-        this.description = description;
+    public Command(LogicTransfer logicTransfer){
+        this.logicTransfer = logicTransfer;
     }
 
     public Command(String description, LogicTransfer logicTransfer){
         this.description = description;
         this.logicTransfer = logicTransfer;
     }
+
 
 
     public void setLogicTransfer(LogicTransfer logicTransfer){

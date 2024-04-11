@@ -5,6 +5,7 @@ import src.data.LabWork;
 import src.interfaces.CollectionManagement;
 
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.Set;
 
 public class CollectionManager implements CollectionManagement {
@@ -39,6 +40,8 @@ public class CollectionManager implements CollectionManagement {
         LabWork labWork = (LabWork) obj;
         collection.getLabWorks().put(labWork.getId(),labWork);
     }
+
+    public Hashtable<Integer, LabWork> getLabWorks(){return getCollection().getLabWorks();}
 
     public Set<Integer> getKeySet (){
         return getCollection().getLabWorks().keySet();

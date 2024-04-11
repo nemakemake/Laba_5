@@ -10,10 +10,6 @@ public class HistoryCommand extends Command{
         this.history = history;
     }
 
-    public void setHistory(History history) {
-        this.history = history;
-    }
-
     @Override
     public void execute(String arg) {
         logicTransfer.sendOutputln(history.toString());

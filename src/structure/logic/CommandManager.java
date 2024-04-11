@@ -14,21 +14,21 @@ public class CommandManager {
     History history = new History();
 
     public CommandManager(LogicTransfer logicTransfer, Console console){
-        addCommand("help", new HelpCommand(logicTransfer));
-        addCommand("save", new SaveCommand(logicTransfer));
-        addCommand("exit", new ExitCommand(logicTransfer));
-        addCommand("execute_script", new ExecuteScriptCommand(logicTransfer, this, console));
-        addCommand("add", new AddCommand(logicTransfer));
-        addCommand("info",new InfoCommand(logicTransfer));
-        addCommand("show",new ShowCommand(logicTransfer));
-        addCommand("update", new UpdateCommand(logicTransfer));
-        addCommand("remove_by_id", new RemoveByIDCommand(logicTransfer));
-        addCommand("clear", new ClearCommand(logicTransfer));
-        addCommand("add_if_max", new AddIfMaxCommand(logicTransfer));
-        addCommand("remove_greater", new RemoveGreaterCommand(logicTransfer));
-        addCommand("history", new HistoryCommand(logicTransfer, history));
-        addCommand("min_by_discipline", new MinByDisciplineCommand(logicTransfer));
-        addCommand("count_by_difficulty", new CountByDifficultyCommand(logicTransfer));
+        addCommand(new HelpCommand(logicTransfer));
+        addCommand(new SaveCommand(logicTransfer));
+        addCommand(new ExitCommand(logicTransfer));
+        addCommand(new ExecuteScriptCommand(logicTransfer, this, console));
+        addCommand(new AddCommand(logicTransfer));
+        addCommand(new InfoCommand(logicTransfer));
+        addCommand(new ShowCommand(logicTransfer));
+        addCommand(new UpdateCommand(logicTransfer));
+        addCommand(new RemoveByIDCommand(logicTransfer));
+        addCommand(new ClearCommand(logicTransfer));
+        addCommand(new AddIfMaxCommand(logicTransfer));
+        addCommand(new RemoveGreaterCommand(logicTransfer));
+        addCommand(new HistoryCommand(logicTransfer, history));
+        addCommand(new MinByDisciplineCommand(logicTransfer));
+        addCommand(new CountByDifficultyCommand(logicTransfer));
     }
 
     public void setBlocks(CollectionManager collectionManager, LogicTransfer logicTransfer){
@@ -39,9 +39,9 @@ public class CommandManager {
             listOfCommands.get(key).setCollectionManager(collectionManager);
         }
     }
-    private void addCommand(String name, Command command){
+    private void addCommand(Command command){
         command.setCollectionManager(collectionManager);
-        listOfCommands.put(name, command);
+        listOfCommands.put(command.getDescription(), command);
     }
     public void jobFinder(String name, String arg){
         try {

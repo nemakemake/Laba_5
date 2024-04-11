@@ -12,8 +12,8 @@ public class CoordinatesDeserializer implements JsonDeserializer<Coordinates>
     {
         Coordinates coordinates = new Coordinates();
         JsonObject data = json.getAsJsonObject();
-        coordinates.setX(data.get("x").getAsLong());
-        coordinates.setY(data.get("y").getAsDouble());
+        coordinates.setX(data.get("x").getAsInt());
+        coordinates.setY(data.get("y").getAsInt());
 
         return coordinates;
     }

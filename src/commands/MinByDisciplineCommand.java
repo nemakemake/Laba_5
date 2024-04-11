@@ -13,7 +13,7 @@ public class MinByDisciplineCommand extends Command{
     public void execute(String arg) {
         LabWork min = null;
         boolean fl = true;
-        for (int key: collectionManager.getCollection().getLabWorks().keySet()){
+        for (int key: collectionManager.getKeySet()){
             LabWork temp = collectionManager.getElement(key);
             if (fl){
                 min = temp;

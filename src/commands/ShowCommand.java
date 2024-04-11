@@ -9,7 +9,7 @@ public class ShowCommand extends Command{
 
     @Override
     public void execute(String arg) {
-        for (int key: collectionManager.getCollection().getLabWorks().keySet()){
+        for (int key: collectionManager.getKeySet()){
             logicTransfer.sendOutputln(collectionManager.getElement(key).toString());
         }
     }

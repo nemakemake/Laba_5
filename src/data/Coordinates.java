@@ -1,29 +1,29 @@
 package src.data;
 
 public class Coordinates {
-    private long x; //Значение поля должно быть больше -804
-    private Double y; //Значение поля должно быть больше -710, Поле не может быть null
+    private Integer x; //Значение поля должно быть больше -804
+    private Integer y; //Значение поля должно быть больше -710, Поле не может быть null
 
-    public Coordinates(long x, Double y){
+    public Coordinates(Integer x, Integer y){
         this.x = x;
         this.y = y;
     }
 
     public Coordinates(){}
 
-    public long getX() {
+    public Integer getX() {
         return x;
     }
 
-    public void setX(long x) {
+    public void setX(Integer x) {
         this.x = x;
     }
 
-    public Double getY() {
+    public Integer getY() {
         return y;
     }
 
-    public void setY(Double y) {
+    public void setY(Integer y) {
         this.y = y;
     }
 

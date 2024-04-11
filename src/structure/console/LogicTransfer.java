@@ -25,4 +25,9 @@ public class LogicTransfer {
     public String requestInput(){
         return console.getInput().read();
     }
+
+    public String requestInput(String arg){
+        sendOutputln(arg);
+        return console.getInput().read();
+    }
 }

@@ -16,7 +16,7 @@ public class CountByDifficultyCommand extends Command{
                 "3) VERY_HARD\n" +
                 "4) TERRIBLE\n->");
         int level = Integer.parseInt(logicTransfer.requestInput());
-        for (int key: collectionManager.getCollection().getLabWorks().keySet()){
+        for (int key: collectionManager.getKeySet()){
             if (collectionManager.getElement(key).getDifficulty().ordinal()+1 == level){
                 k++;
             }

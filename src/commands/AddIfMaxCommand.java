@@ -25,7 +25,7 @@ public class AddIfMaxCommand extends Command{
     public void execute(String arg) {
         LabWork lab = elementCreate.createNewElement();
         int flag = 0;
-        Hashtable<Integer, LabWork> labworks = collectionManager.getCollection().getLabWorks();
+        Hashtable<Integer, LabWork> labworks = collectionManager.getLabWorks();
         for (int x :labworks.keySet()){
             flag += lab.compareTo(labworks.get(x)) <= 0 ? 1 : 0;
         }

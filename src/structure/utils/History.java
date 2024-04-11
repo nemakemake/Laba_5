@@ -28,7 +28,7 @@ public class History {
         String s = "История:\n";
         Integer k = 1;
         for (Command x: history){
-            s += k.toString() + " " + x.toString() + "\n";
+            s += k + " " + x.toString() + "\n";
             k++;
         }
         return s;

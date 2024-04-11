@@ -35,7 +35,7 @@ public class RemoveGreaterCommand extends Command {
 
     private void removeGreater(ArrayList<Integer> indexes){
         for (Integer x: indexes){
-            collectionManager.getCollection().getLabWorks().remove(x);
+            collectionManager.getLabWorks().remove(x);
         }
     }
     private void findIndexes(int arg){

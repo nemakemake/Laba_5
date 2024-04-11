@@ -3,6 +3,7 @@ package src.collection;
 import src.data.Coordinates;
 import src.data.Discipline;
 import src.data.LabWork;
+import src.structure.console.Validator;
 import src.structure.logic.CollectionManager;
 import src.structure.console.LogicTransfer;
 
@@ -12,9 +13,11 @@ import java.util.Collections;
 public class ElementCreate {
     private LogicTransfer logicTransfer;
     private CollectionManager collectionManager;
+    private final Validator validator;
     public ElementCreate(LogicTransfer logicTransfer, CollectionManager collectionManager){
         this.logicTransfer = logicTransfer;
         this.collectionManager = collectionManager;
+        validator = new Validator();
     }
     public LabWork createNewElement(){
         return new LabWork(generateID(),
@@ -31,34 +34,63 @@ public class ElementCreate {
     }
 
     public String createNewName(){
-        System.out.print("Введите имя\n-> ");
-        return logicTransfer.requestInput();
+        String arg = logicTransfer.requestInput("Введите имя");
+        if (validator.checkName(arg)) {
+            return arg;
+        } else {
+            logicTransfer.sendOutputln("Invalid input. Try again");
+            return createNewName();
+        }
     }
 
     public Coordinates createNewCoordinates(){
-        System.out.print("Введите координаты по X и Y через пробел\n->");
-        String[] args = logicTransfer.requestInput().split(" ");
-        return new Coordinates(Long.parseLong(args[0]), Double.parseDouble(args[1]));
+        String arg = logicTransfer.requestInput("Введите координаты по X и Y через пробел");
+        if (validator.checkCoordinates(arg)){
+            String[] args = arg.split(" ");
+            return new Coordinates(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
+        } else {
+            logicTransfer.sendOutputln("Invalid input. Try again");
+            return createNewCoordinates();
+        }
+
     }
 
     public Long createNewMinimalPoint(){
-        System.out.print("Введите минимально возможные баллы\n->");
-        return Long.parseLong(logicTransfer.requestInput());
+        String arg = logicTransfer.requestInput("Введите минимально возможные баллы");
+        if (!validator.checkMinPoint(arg)){
+            logicTransfer.sendOutputln("Invalid input. Try again");
+            return createNewMinimalPoint();
+        } else {
+            return arg == null ? null: Long.parseLong(arg);
+        }
     }
 
     public Integer createNewDifficulty(){
-        System.out.print("Выберите сложность работы\n" +
+        String arg = logicTransfer.requestInput("Выберите сложность работы\n" +
                 "1) VERY_EASY\n" +
                 "2) NORMAL\n" +
                 "3) VERY_HARD\n" +
-                "4) TERRIBLE\n->");
-        return Integer.parseInt(logicTransfer.requestInput());
+                "4) TERRIBLE");
+        if (!validator.checkDifficulty(arg)){
+            logicTransfer.sendOutputln("Invalid input. Try again");
+            return createNewDifficulty();
+        } else { return Integer.parseInt(arg);}
     }
 
     public Discipline createNewDiscipline() {
-        System.out.print("Введите название дисциплины и количество лабораторных в ней\n->");
-        String[] line = logicTransfer.requestInput().split(" ");
-        return new Discipline(line[0], Integer.parseInt(line[1]));
+        String arg = logicTransfer.requestInput("Введите название дисциплины и количество лабораторных в ней");
+        if (validator.checkDiscipline(arg)){
+            String[] line = arg.split(" ");
+            if (line.length == 1){
+                return new Discipline(line[0], null);
+            }
+            return new Discipline(line[0], Integer.parseInt(line[1]));
+        } else {
+            logicTransfer.sendOutputln("Invalid input. Try again");
+            return createNewDiscipline();
+        }
+
+
     }
 
     public void setLogicTransfer(LogicTransfer logicTransfer) {
