@@ -5,8 +5,8 @@ import src.structure.logic.CommandManager;
 
 public class Console implements Client {
     protected CommandManager commandManager;
-    protected ConsoleInput input = new ConsoleInput();
-    protected ConsoleOutput output = new ConsoleOutput();
+    protected final ConsoleInput input = new ConsoleInput();
+    protected final ConsoleOutput output = new ConsoleOutput();
     public Console(){
     }
 
@@ -25,10 +25,14 @@ public class Console implements Client {
         String line = input.read();
         String name = "";
         String arg = "";
+        if (line == null){
+            commandManager.jobFinder(null, "");
+        } else {
         String[] fields = line.split(" ", 2);
         if (fields.length >= 1) name = fields[0];
         if (fields.length >= 2) arg = fields[1];
         commandManager.jobFinder(name, arg);
+    }
     }
 
     public void operateWithScript(String line){

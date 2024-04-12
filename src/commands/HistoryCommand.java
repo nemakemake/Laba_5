@@ -4,7 +4,7 @@ import src.structure.utils.History;
 import src.structure.console.LogicTransfer;
 
 public class HistoryCommand extends Command{
-    History history;
+    final History history;
     public HistoryCommand(LogicTransfer logicTransfer, History history){
         super("history", logicTransfer);
         this.history = history;

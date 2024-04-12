@@ -8,7 +8,7 @@ import src.structure.logic.CollectionManager;
 public class Updater {
     LogicTransfer logicTransfer;
     CollectionManager collectionManager;
-    ElementCreate elementCreate;
+    final ElementCreate elementCreate;
     public Updater(CollectionManager collectionManager, LogicTransfer logicTransfer){
         this.collectionManager = collectionManager;
         this.logicTransfer = logicTransfer;

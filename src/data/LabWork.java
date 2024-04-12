@@ -25,10 +25,6 @@ public class LabWork implements Comparable{
         this.discipline = discipline;
     }
 
-    public LabWork createSample(){
-        return new LabWork(1,"sample", new Coordinates(1,1), LocalDate.now(), 1L, 2, new Discipline("SampleDis", 1));
-    }
-
     public Integer getId() {
         return id;
     }

@@ -43,7 +43,7 @@ public class Validator {
             if (arg.isBlank()){ return false;}
             String[] args = arg.split(" ");
             if (args.length >1) {
-                Integer a = Integer.parseInt(args[1]);
+                Integer.parseInt(args[1]);
             }
             return true;
         } catch(NumberFormatException | ArrayIndexOutOfBoundsException e){

@@ -5,7 +5,7 @@ import src.structure.logic.CollectionManager;
 import src.structure.console.LogicTransfer;
 
 public class AddCommand extends Command{
-    ElementCreate elementCreate = new ElementCreate(logicTransfer, collectionManager);
+    final ElementCreate elementCreate = new ElementCreate(logicTransfer, collectionManager);
     public AddCommand(LogicTransfer logicTransfer){
         super("add", logicTransfer);
     }

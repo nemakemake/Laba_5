@@ -8,9 +8,9 @@ import src.structure.console.LogicTransfer;
 import java.util.ArrayList;
 
 public class RemoveGreaterCommand extends Command {
-    ArrayList<Integer> indexes = new ArrayList<Integer>();
+    final ArrayList<Integer> indexes = new ArrayList<>();
     LabWork lab;
-    ElementCreate elementCreate = new ElementCreate(logicTransfer, collectionManager);
+    final ElementCreate elementCreate = new ElementCreate(logicTransfer, collectionManager);
     public RemoveGreaterCommand(LogicTransfer logicTransfer){
         super("remove_greater", logicTransfer);
         this.logicTransfer = logicTransfer;

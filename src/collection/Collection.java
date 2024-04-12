@@ -10,7 +10,7 @@ public class Collection {
     private LocalDate CreationDate;
     private String name;
     public Collection(String name){
-        this.LabWorks = new Hashtable<Integer, LabWork>();
+        this.LabWorks = new Hashtable<>();
         this.CreationDate = LocalDate.now();
         this.name = name;
     }

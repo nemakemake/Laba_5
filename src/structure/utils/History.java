@@ -7,11 +7,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public class History {
     public History(){}
 
-    ConcurrentLinkedQueue<Command> history = new ConcurrentLinkedQueue<>();
-
-    public ConcurrentLinkedQueue<Command> getHistory() {
-        return history;
-    }
+    final ConcurrentLinkedQueue<Command> history = new ConcurrentLinkedQueue<>();
 
     public void addToHistory(Command command){
         int MAX_SIZE = 14;
@@ -25,12 +21,12 @@ public class History {
 
     @Override
     public String toString() {
-        String s = "История:\n";
+        StringBuilder s = new StringBuilder("История:\n");
         Integer k = 1;
         for (Command x: history){
-            s += k + " " + x.toString() + "\n";
+            s.append(k).append(" ").append(x.toString()).append("\n");
             k++;
         }
-        return s;
+        return s.toString();
     }
 }

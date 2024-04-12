@@ -17,10 +17,10 @@ import java.util.Hashtable;
 
 
 public class JsonWriter implements Writer {
-    String FILE_NAME = "collection.json";
-    Gson gson;
-    Collection collection;
-    public JsonWriter(CollectionManager collectionManager) throws IOException {
+    final String FILE_NAME = "collection.json";
+    final Gson gson;
+    final Collection collection;
+    public JsonWriter(CollectionManager collectionManager) {
         gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .registerTypeAdapter(LocalDate.class, new LocalDateTypeAdapter())
@@ -35,7 +35,7 @@ public class JsonWriter implements Writer {
     }
 
     @Override
-    public void write() throws IOException {
+    public void write() {
         String jsonText = gson.toJson(collection);
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME))) {
             for (String value : jsonText.split("\n")) {

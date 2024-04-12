@@ -66,11 +66,12 @@ public class ElementCreate {
     }
 
     public Integer createNewDifficulty(){
-        String arg = logicTransfer.requestInput("Выберите сложность работы\n" +
-                "1) VERY_EASY\n" +
-                "2) NORMAL\n" +
-                "3) VERY_HARD\n" +
-                "4) TERRIBLE");
+        String arg = logicTransfer.requestInput("""
+                Выберите сложность работы
+                1) VERY_EASY
+                2) NORMAL
+                3) VERY_HARD
+                4) TERRIBLE""");
         if (!validator.checkDifficulty(arg)){
             logicTransfer.sendOutputln("Invalid input. Try again");
             return createNewDifficulty();

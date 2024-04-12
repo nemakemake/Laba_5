@@ -11,9 +11,9 @@ import java.util.Deque;
 import java.util.Scanner;
 
 public class ExecuteScriptCommand extends Command{
-    Deque<File> fileStack = new ArrayDeque<>();
-    Console console;
-    CommandManager commandManager;
+    final Deque<File> fileStack = new ArrayDeque<>();
+    final Console console;
+    final CommandManager commandManager;
     public ExecuteScriptCommand(LogicTransfer logicTransfer, CommandManager commandManager, Console console){
         super("execute_script", logicTransfer);
         this.commandManager = commandManager;

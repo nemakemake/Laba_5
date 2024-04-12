@@ -22,7 +22,9 @@ public class MinByDisciplineCommand extends Command{
             }
             min = min.getDiscipline().compareTo(temp.getDiscipline()) >= 0 ? temp : min;
         }
-        logicTransfer.sendOutput(min.toString());
+        if (min != null) {
+            logicTransfer.sendOutput(min.toString());
+        }
     }
 }
 

@@ -9,7 +9,7 @@ public class LogicTransfer {
     public LogicTransfer(){
     }
 
-    public void setBlocks(Console console, CommandManager commandManager) {
+    public void setBlocks(Console console) {
         this.console = console;
     }
 

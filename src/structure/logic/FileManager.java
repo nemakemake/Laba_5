@@ -9,8 +9,8 @@ import java.util.HashSet;
 
 
 public class FileManager {
-    CollectionManager collectionManager;
-    LogicTransfer logicTransfer;
+    final CollectionManager collectionManager;
+    final LogicTransfer logicTransfer;
 
     public FileManager(LogicTransfer logicTransfer,CollectionManager collectionManager){
         this.collectionManager = collectionManager;
@@ -18,12 +18,8 @@ public class FileManager {
     }
 
     public void saveFile(){
-        try {
-            JsonWriter writer = new JsonWriter(collectionManager);
-            writer.write();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
+        JsonWriter writer = new JsonWriter(collectionManager);
+        writer.write();
     }
 
     public void readFile(String filePath){

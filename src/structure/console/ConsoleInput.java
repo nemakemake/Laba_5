@@ -3,7 +3,7 @@ import java.util.NoSuchElementException;
 import java.util.Objects;
 import java.util.Scanner;
 public class ConsoleInput {
-    Scanner scanner = new Scanner(System.in);
+    final Scanner scanner = new Scanner(System.in);
     public ConsoleInput(){}
     public String read() {
         String arg = null;

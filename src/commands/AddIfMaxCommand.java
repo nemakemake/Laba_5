@@ -9,7 +9,7 @@ import java.util.Hashtable;
 
 public class AddIfMaxCommand extends Command{
 
-    ElementCreate elementCreate = new ElementCreate(logicTransfer, collectionManager);
+    final ElementCreate elementCreate = new ElementCreate(logicTransfer, collectionManager);
     public AddIfMaxCommand(LogicTransfer logicTransfer){
         super("add_if_max", logicTransfer);
         this.logicTransfer = logicTransfer;

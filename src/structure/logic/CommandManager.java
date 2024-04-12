@@ -8,10 +8,10 @@ import src.structure.console.LogicTransfer;
 import java.util.HashMap;
 
 public class CommandManager {
-    HashMap<String, Command> listOfCommands = new HashMap<String, Command>();
+    final HashMap<String, Command> listOfCommands = new HashMap<>();
     CollectionManager collectionManager;
     LogicTransfer logicTransfer;
-    History history = new History();
+    final History history = new History();
 
     public CommandManager(LogicTransfer logicTransfer, Console console){
         addCommand(new HelpCommand(logicTransfer));

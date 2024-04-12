@@ -15,8 +15,8 @@ import java.util.Hashtable;
 
 
 public class JsonParser implements Parser {
-    Gson gson;
-    String filePath;
+    final Gson gson;
+    final String filePath;
 
     public JsonParser(String filePath){
         gson = new GsonBuilder()
